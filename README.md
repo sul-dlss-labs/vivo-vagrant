@@ -1,4 +1,4 @@
-# VIVO Vagrant - v1.9
+# VIVO Vagrant - v1.10rc2
 
 [Vagrant](http://www.vagrantup.com/) configuration and install scripts for running [VIVO](http://vivoweb.org) on a virtual machine, aka [Vagrant box](http://docs.vagrantup.com/v2/boxes.html), running an Ubuntu 64 Server 16.04.3 image.
 
