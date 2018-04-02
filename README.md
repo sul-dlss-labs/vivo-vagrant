@@ -2,7 +2,7 @@
 
 [Vagrant](http://www.vagrantup.com/) configuration and install scripts for running [VIVO](http://vivoweb.org) on a virtual machine, aka [Vagrant box](http://docs.vagrantup.com/v2/boxes.html), running an Ubuntu 64 Server 16.04.3 image.
 
-The virtual machine will boot and install VIVO 1.9 and its dependencies.  This will take several minutes for the initial install.
+The virtual machine will boot and install VIVO 1.10 release candidate 2 and its dependencies.  This will take several minutes for the initial install.
 
 If you have questions or encounter problems, please email the VIVO technical list at [vivo-tech@googlegroups.com](https://groups.google.com/forum/#!forum/vivo-tech) or open issue here in the Github issue tracker.
 
@@ -16,7 +16,7 @@ This Vagrant box is intended for development and experimentation only.  Change d
 ## Install the VIVO Vagrant box
 
 ~~~
-$ git clone https://github.com/lawlesst/vivo-vagrant.git vivo-vagrant
+$ git clone https://github.com/sul-dlss-labs/vivo-vagrant.git vivo-vagrant
 $ cd vivo-vagrant
 $ vagrant up
 ~~~
@@ -43,7 +43,7 @@ $ vlog
  * To start/stop Tomcat run `sudo /etc/init.d/tomcat start|stop|restart`.
  * A Vagrant [shared directory](http://docs.vagrantup.com/v2/synced-folders/) is available at `/work` from the box.
  * Use the `vagrant suspend` and `vagrant resume` commands to manage your Vagrant box when not in use or if you plan to restart or shutdown the host system, as opposed to using the VirtualBox or VMWare Fusion admin user interface.
- 
+
 ## Re-provisioning
 
 You can, at anytime, re-provision your Vagrant box.  By running the following from your host machine.  This will reinstall all components of the Vagrant box and reinstall VIVO.  This will destroy any changes you've made to your VIVO installation so be sure to backup any data or code changes you have made beforehand.
@@ -51,11 +51,11 @@ You can, at anytime, re-provision your Vagrant box.  By running the following fr
  ~~~
  $ vagrant up --provision
  ~~~
- 
+
 ## Reseting the VIVO database
 From time to time, you might also want to rollback to a clean VIVO database. This can be done by stopping tomcat and removing the file-based TDB triple store: `rm /usr/local/vdata/tdbContentModels`. Warning - this will delete all of the data you have loaded into VIVO and any ontology changes.
 
- 
+
 ## Running previous releases of VIVO and Vitro
 If you are interested in running VIVO 1.5, 1.6, 1.7, 1.8 there are separate branches for each of those released version.
  ~~~
